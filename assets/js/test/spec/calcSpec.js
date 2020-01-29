@@ -12,6 +12,10 @@ describe("PostcodeValidator", function(){
         
         it("should return false", function() {
             expect(text("abcde")).toBe(false);
-        })
+        });
+        
+        it("should return false", function() {
+            expect(text("123456")).toBe(false);
+        });
     });
 });
