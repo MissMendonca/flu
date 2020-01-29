@@ -17,5 +17,11 @@ describe("PostcodeValidator", function(){
         it("should return false", function() {
             expect(text("123456")).toBe(false);
         });
+        it("should return false", function() {
+            expect(text("123-ab")).toBe(false);
+        });
+        it("should return false", function() {
+            expect(text(".-.2a4")).toBe(false);
+        });
     });
 });
