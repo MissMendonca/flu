@@ -1,8 +1,6 @@
 function text(userInput){
-    var letterNumber = /^[0-9a-zA-z]{5,7}$/;
-    var isLetter = /^[a-zA-Z]+$/;
-    var isNumber = /^\d+$/;
-    if ( !(isLetter.test(userInput) || isNumber.test(userInput)) && userInput.match(letterNumber)){
+    var letterNumber =/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]{5,7})$/;
+    if (userInput.match(letterNumber)){
         return true;
     }
     return false;
